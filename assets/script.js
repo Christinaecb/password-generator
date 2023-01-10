@@ -3,6 +3,16 @@
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+// Added function to confirm button is being clicked
+function generatePassword() {
+  console.log("Click! ")
+
+
+
+
+  
+}
+
 
 // Write password to the #password input
 function writePassword() {

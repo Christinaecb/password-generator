@@ -11,6 +11,9 @@ function generatePassword() {
 
 
   
+// The value being returned in password generator box
+return "Generated Password"
+  
 }
 
 

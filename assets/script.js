@@ -18,19 +18,30 @@ generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
+  var correctPrompts = getPrompts();   //This will return true/false 
+//If correct prompts are selected a password will be generated
+  if(correctPrompts) {
+
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
+  }
 }
 // Where I generate passwords based on the prompts. Added console.log click to confirm button is working
 function generatePassword() {
 console.log("Click!")
+
+var password = "";
+for(var i = 0; i <characterLength; i++) {
+    var randomLetter = Math.floor(Math.random() * choiceArr.length);
+    password = password + choiceArr[randomLetter];
 }
 
 // Where I get prompts from relating to character length, upper/lowercase and special characters
 function getPrompts(){
+  choiceArr = [];
+
   characterLength = parseInt(prompt("How many characters do you want your password to be? (8 - 128 characters"));
 
   if(isNaN(characterLength || characterLength <8 || characterLength > 128)) {
@@ -50,6 +61,7 @@ function getPrompts(){
   if (confirm("Would you like to include numbers in your password?")) {
     choiceArr = choiceArr.concat(numberArr);
   }
+  return true;
 
 
 

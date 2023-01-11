@@ -24,18 +24,21 @@ function writePassword() {
 
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
+  } else {
+      passwordText.value = "";
   }
 }
 // Where I generate passwords based on the prompts. Added console.log click to confirm button is working
 function generatePassword() {
-console.log("Click!")
+  console.log("Click!")
 
-var password = "";
-for(var i = 0; i <characterLength; i++) {
-    var randomLetter = Math.floor(Math.random() * choiceArr.length);
-    password = password + choiceArr[randomLetter];
+  var password = "";
+  for(var i = 0; i <characterLength; i++) {
+      var randomCharacter = Math.floor(Math.random() * choiceArr.length);
+    password = password + choiceArr[randomCharacter];
+  }
+  return password;
 }
 
 // Where I get prompts from relating to character length, upper/lowercase and special characters

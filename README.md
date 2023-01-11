@@ -26,9 +26,12 @@ THEN the password is either displayed in an alert or written to the page
 
 ## Description
 
+In this assignment we are creating a password generator that creates passwords following certain criteria as follows: a length between 8 to 128 characters, lowercase, uppercase, numeric, and/or special characters.
 
 ## Screenshot 
 
-![Alt text]()
+![Alt text](./assets/Images/ChristinaJavaScript.jpg)
 
 # Link to Deployed Site
+
+https://christinaecb.github.io/JavaScript-Challenge/

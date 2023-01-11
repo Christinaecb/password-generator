@@ -24,15 +24,41 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
+// Where I generate passwords based on the prompts. Added console.log click to confirm button is working
 function generatePassword() {
-
+console.log("Click!")
 }
 
-// Where I get information from
+// Where I get prompts from relating to character length, upper/lowercase and special characters
 function getPrompts(){
-  
+  characterLength = parseInt(prompt("How many characters do you want your password to be? (8 - 128 characters"));
+
+  if(isNaN(characterLength || characterLength <8 || characterLength > 128)) {
+      alert("Character length must be a number between 8 - 128. Please try again");
+      return false;
+  }
+// If they want lowercase letters. Puts the lowercase letters in the choiceArr
+  if (confirm("Would you like to include lowercase letters in your password?")) {
+    choiceArr = choiceArr.concat(lowerCaseArr);
+  }
+  if (confirm("Would you like to include uppercase letters in your password?")) {
+    choiceArr = choiceArr.concat(upperCaseArr);
+  }
+  if (confirm("Would you like to include special characters in your password?")) {
+    choiceArr = choiceArr.concat(specialCharArr);
+  }
+  if (confirm("Would you like to include numbers in your password?")) {
+    choiceArr = choiceArr.concat(numberArr);
+  }
+
+
+
 }
+
+
+
+
+
 
 
 

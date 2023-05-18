@@ -30,7 +30,7 @@ In this assignment we are creating a password generator that creates passwords f
 
 ## Screenshot 
 
-![Alt text](./assets/Images/ChristinaJavaScript.jpg)
+![Alt text](./assets/Images/Screenshot.jpg)
 
 # Link to Deployed Site
 
